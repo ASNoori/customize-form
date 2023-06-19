@@ -1,0 +1,133 @@
+.header-position {
+  position: fixed;
+  top: 0;
+  //   right: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.header-sticky-position {
+  position: sticky;
+  top: 0;
+  //   right: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.container-footer-fixed {
+  // position: absolute;
+  top: 100px; /* adjust this value to match your header height */
+  bottom: 180px; /* adjust this value to match your footer height */
+  left: 0;
+  right: 0;
+  // overflow-y: auto;
+  padding: 16px;
+}
+
+.container-footer-hide {
+  // position: absolute;
+  top: 100px; /* adjust this value to match your header height */
+  // left: 0;
+  // right: 0;
+  padding: 16px;
+  bottom: 0;
+}
+.sidenav-container-box {
+  // position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+  // z-index: 1;
+overflow-y: auto;
+max-height: calc(100vh - 90px);
+margin: 0;
+padding: 0;
+}
+
+.sidenav-wrapper {  /* mat-nav-list class*/
+  max-height: calc(100vh - 80px);
+  overflow-y: hidden;
+
+}
+
+.fixed-sidebar {  /* mat-nav-list class*/
+  // height: auto;
+  // position: absolute;
+  // top: 90px;
+  // left: 0;
+  // right: 0;
+  max-height: calc(100vh - 90px);
+  // z-index: 2;
+  overflow-y: auto;
+
+}
+.scroll-sidebar {   /* mat-nav-list class*/
+  // position: absolute;
+  // top: 90px;
+  // left: 0;
+  // right: 0;
+  background: #c24343;
+  // z-index: 2;
+  overflow-y: hidden;
+}
+.sidenav-wrapper::-webkit-scrollbar {
+  display: none;
+}
+// .scroll-sidebar::-webkit-scrollbar {
+//   display: none;
+// }
+// .sidenav-wrapper::-webkit-scrollbar {
+//   display: none;
+// }
+.fixed-sidebar::-webkit-scrollbar {
+  width: 8px;
+  background-color: #eee;
+}
+
+.fixed-sidebar::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 10px;
+}
+
+.fixed-sidebar::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+.sidenav-container-box::-webkit-scrollbar {
+  width: 8px;
+  background-color: #eee;
+}
+
+.sidenav-container-box::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 10px;
+}
+
+.sidenav-container-box::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+mat-sidenav {
+  width: 200px;
+  // padding:20px;
+  background-color: rgb(48, 46, 46);
+  color: white;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow:auto;
+}
+
+mat-list-item {
+  font-size: 18px;
+  color: #754242;
+  text-decoration: none;
+}
+
+mat-list-item:hover {
+  background-color: #bd0606;
+}
+
+
+@media only screen and (max-width: 600px) {
+  mat-sidenav{
+    width: 40%;
+  }
+}

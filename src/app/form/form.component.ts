@@ -1,14 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { FormBuilder, FormControl } from '@angular/forms';
 import { ThemePalette } from '@angular/material/core';
-import { buffer } from 'rxjs';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app-form',
+  templateUrl: './form.component.html',
+  styleUrls: ['./form.component.scss']
 })
-export class AppComponent implements OnInit {
+export class FormComponent implements OnInit {
   title = 'customize-form';
   // public disabled = false;
   public color: ThemePalette = 'primary';
@@ -20,11 +19,13 @@ export class AppComponent implements OnInit {
   imgname: any;
   ImageBase64!: any;
   url: any;
+  toggle= false;
   constructor(private fb: FormBuilder) {}
   ngOnInit(): void {
     this.getdata();
     this.customizeform = this.fb.group({
       header: new FormControl(),
+      toggle: new FormControl(),
       prcolor: new FormControl(),
       sccolor: new FormControl(),
       trcolor: new FormControl(),
@@ -104,4 +105,12 @@ export class AppComponent implements OnInit {
       }
     }
   }
+  className = '';
+  onToggleChange(event: any) {
+    const darkClassName = 'darkMode';
+    this.customizeform.value.toggle=event.checked;
+   
+    this.className = event.checked ? darkClassName : '';
+  }
 }
+

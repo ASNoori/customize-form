@@ -1,0 +1,52 @@
+.headerhght{
+height:80px;
+}
+.toolbar{
+    // background-color: #1f86ff;
+    z-index:2;
+}
+.extra-toolbar{
+    // background-color: #a9e0ae;
+    height:20px;
+    z-index:2;
+}
+
+.example-spacer
+{
+    flex : 1 1 auto;
+}
+.menu-icon{
+    background: transparent;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.logout-icon 
+{   
+    background: transparent;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.header-logo{
+    cursor: pointer;
+}
+
+.example-container {
+    width: 500px;
+    height: 300px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  
+  .example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+  }

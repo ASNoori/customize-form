@@ -1,0 +1,13 @@
+<div class="headerhght">
+<mat-toolbar [style.background-color]="scstat.rgba" class="extra-toolbar">    </mat-toolbar>
+<mat-toolbar [style.background-color]="prstat.rgba" *ngIf="this.fixed||this.sticky"  class="toolbar"  >
+ <button mat-icon-button class="menu-icon me-3">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <!-- <img [src]="this.logo" style="width:25px;height:15px"> -->
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="logout-icon" matTooltip="Log Out" matTooltipPosition="before">
+      <mat-icon>exit_to_app</mat-icon>
+    </button>
+  </mat-toolbar>
+</div>

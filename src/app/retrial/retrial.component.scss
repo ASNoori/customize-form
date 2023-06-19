@@ -1,0 +1,131 @@
+.header-position {
+  position: fixed;
+  top: 0;
+  //   right: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.header-sticky-position {
+  position: sticky;
+  top: 0;
+  //   right: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.sidenav-container {
+    height: 100%;
+    top: 70px;
+}
+
+.sidenav {
+  bottom: 0;
+  width: 240px;
+  height: 100%;
+  // padding-top:20px;
+  // padding-bottom:20px;
+}
+.fixed-footer-height{
+height: calc(100vh - 240px);
+overflow-y: auto;
+}
+.nav-list {
+  height: calc(100vh - 70px); /* 56px is the height of the mat-toolbar */
+  overflow-y: auto;
+}
+.main-content {
+  max-height: calc(100vh - 70px);
+  margin: 0px 16px;
+  padding: 20px;
+  overflow-y: auto;
+  width: calc(100vw - 240px);
+  // background-color: palevioletred;
+}
+@media only screen and (max-width: 600px) {
+  mat-sidenav {
+    width: 100%;
+  }
+}
+
+
+  .nav-list::-webkit-scrollbar {
+    width: 8px;
+    background-color: #eee;
+  }
+  
+  .nav-list::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 10px;
+  }
+  
+  .nav-list::-webkit-scrollbar-track {
+    background-color: #eee;
+  }
+
+  .fixed-footer-height::-webkit-scrollbar {
+    width: 8px;
+    background-color: #eee;
+  }
+  
+  .fixed-footer-height::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 10px;
+  }
+  
+  .fixed-footer-height::-webkit-scrollbar-track {
+    background-color: #eee;
+  }
+
+  
+.sidenav-wrapper {  /* mat-nav-list class*/
+  max-height: calc(100vh - 80px);
+  overflow-y: hidden;
+
+}
+
+.fixed-sidebar {  /* mat-nav-list class*/
+  // height: auto;
+  // position: absolute;
+  // top: 90px;
+  // left: 0;
+  // right: 0;
+  max-height: calc(100vh - 90px);
+  // z-index: 2;
+  overflow-y: auto;
+
+}
+.scroll-sidebar {   /* mat-nav-list class*/
+ 
+
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+.sidenav-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.scroll-sidebar::-webkit-scrollbar {
+  width:20px;
+  background-color: rgba(156, 140, 140, 0);
+}
+.scroll-sidebar::-webkit-scrollbar-thumb {
+  background-color: #ff000000;
+}
+
+.fixed-sidebar::-webkit-scrollbar {
+  width: 8px;
+  background-color: #eee;
+}
+
+.fixed-sidebar::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 10px;
+}
+
+.fixed-sidebar::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+.sidenav-container-box::-webkit-scrollbar {
+  width: 8px;
+  background-color: #eee;
+}

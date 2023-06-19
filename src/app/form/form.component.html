@@ -1,0 +1,129 @@
+<div class="container-fluid mat-app-background" style="width:100%;height:100%;overflow-y:auto" [ngClass]="{'darkMode': this.className === 'darkMode'}">
+    <div class="row d-flex justify-content-center align-items-center form-div">
+      <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
+        <mat-card class="card-content">
+          <mat-card-header>
+            <mat-card-title>Customization Settings</mat-card-title>
+          </mat-card-header>
+          <mat-divider></mat-divider>
+          <mat-card-content class="form-content">
+            <form name="customizeform" [formGroup]="customizeform" (submit)="onSubmit()">
+              <div class="row">
+                <div class="col-md-12">
+                  <mat-slide-toggle color="primary" formControlName="toggle" (change)=onToggleChange($event)></mat-slide-toggle>
+                  <mat-label>Dark Mode</mat-label>
+                  <button  class="edit" mat-raised-button (click)="onEdit()"><mat-icon  color="primary">edit</mat-icon></button>
+                </div>
+                <div class="col-md-12 file-ip">
+                  <input formControlName="logo" type="file" (change)="onfileSelected($event)" accept=".jpg,.png,.jpeg">
+                  <button (onclick)="uploadlogo()" mat-flat-button color="primary" type="submit">Upload</button>
+                  <!-- <mat-progress-bar></mat-progress-bar> -->
+                  <mat-hint>Upload logo</mat-hint>
+                </div>
+                <div class="col-md-12">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Header</mat-label>
+                    <mat-select formControlName="header">
+                      <mat-option value="fixed">Fixed/Scroll</mat-option>
+                      <mat-option value="sticky">Sticky</mat-option>
+                      <mat-option value="hide">Hide</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="row">
+                <div class="col-md-4">
+                  <!-- <span style="margin-right:10px;padding:10px"> <input type="color"></span>
+                 <span style="margin-right:10px;padding:10px"><input type="color"></span>
+                 <span style="margin-right:10px;padding:10px"><input type="color"></span>
+                 -->
+                  <mat-form-field>
+                    <mat-label>Choose Primary Color</mat-label>
+                    <input  formControlName="prcolor" matInput [ngxMatColorPicker]="picker">
+                    <ngx-mat-color-toggle matSuffix [for]="picker"></ngx-mat-color-toggle>
+                    <ngx-mat-color-picker #picker [touchUi]="touchUi" [color]="color"></ngx-mat-color-picker>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                  <mat-form-field>
+                    <mat-label>Choose Secondary Color</mat-label>
+                    <input  formControlName="sccolor" matInput [ngxMatColorPicker]="picker1">
+                    <ngx-mat-color-toggle matSuffix [for]="picker1"></ngx-mat-color-toggle>
+                    <ngx-mat-color-picker #picker1 [touchUi]="touchUi" [color]="color"></ngx-mat-color-picker>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                  <mat-form-field>
+                    <mat-label>Choose Tertiary Color</mat-label>
+                    <input   formControlName="trcolor" matInput [ngxMatColorPicker]="picker2">
+                    <ngx-mat-color-toggle matSuffix [for]="picker2"></ngx-mat-color-toggle>
+                    <ngx-mat-color-picker #picker2 [touchUi]="touchUi" [color]="color"></ngx-mat-color-picker>
+                  </mat-form-field>
+                </div>
+              </div>
+                <div class="col-md-12">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Title</mat-label>
+                    <input  formControlName="title" matInput type="text" placeholder="title" name="title" required>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-12 file-ip">
+                  <input formControlName="fav" type="file" (change)="onuploadfavicon($event)" accept=".jpg,.png,.jpeg">
+                  <button (onclick)="uploadfav()" mat-flat-button color="primary" type="submit">Upload</button>
+                  <mat-hint>Upload favicon</mat-hint>
+                  <!-- <mat-progress-bar></mat-progress-bar> -->
+                </div>
+                <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Sidebar</mat-label>
+                    <mat-select  formControlName="sidebar">
+                      <mat-option value="fixed">Fixed</mat-option>
+                      <mat-option value="scroll">Scroll</mat-option>
+                      <mat-option value="collapsed">Collapsed</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Footer</mat-label>
+                    <mat-select  formControlName="footer">
+                      <mat-option value="fixed">Fixed/Scroll</mat-option>
+                      <mat-option value="hide">Hide</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+                <div class="col-md-12">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Select Logo Size</mat-label>
+                    <mat-select  formControlName="logosize">
+                      <mat-option value="per">%</mat-option>
+                      <mat-option value="px">px</mat-option>
+                      <mat-option value="rem">rem</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-12">
+                  <mat-form-field appearance="fill">
+                    <mat-label>Select Logo Position</mat-label>
+                    <mat-select  formControlName="position">
+                      <mat-option value="left">Left</mat-option>
+                      <mat-option value="center">Center</mat-option>
+                      <mat-option value="right">Right</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="button-row">
+                <button mat-raised-button color="primary">Cancel</button>
+                <button *ngIf="!edit" mat-raised-button type="submit" color="primary">Save</button>
+                <button *ngIf="edit" mat-raised-button type="submit" color="primary">Update</button>
+  
+              </div>
+              
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>

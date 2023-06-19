@@ -1,0 +1,375 @@
+<app-header *ngIf="this.fixed && (this.sidefixed || this.sidescroll)" class="header-position"></app-header>
+<app-header *ngIf="this.sticky && (this.sidefixed || this.sidescroll)" class="header-sticky-position"></app-header>
+
+<app-header *ngIf="this.fixed && this.sidecollapse" class="header-position" (click)="nav.toggle()"></app-header>
+<app-header *ngIf="this.sticky && this.sidecollapse" class="header-sticky-position" (click)="nav.toggle()"></app-header>
+<!--***extra*** [ngClass]="{ 'fixed-footer-sidenav-container': this.footfixed, 'hide-footer-sidenav-container': this.foothide}" -->
+<!-- <mat-sidenav-container class="sidenav-container" [ngStyle]="{'bottom.px':this.footfixed === true ? 170 : 0}">
+    <mat-sidenav #nav mode="side" [opened]="true" [style.background-color]="trstat.rgba" class="sidenav">
+        <mat-nav-list class="nav-list"> -->
+<!-- ***extra***[ngClass]="{'fixed-sidebar': this.sidefixed, 'sidenav-wrapper': this.sidecollapse,'scroll-sidebar':  this.sidescroll}"> -->
+<!-- [ngClass]="{ 'fixed-footer-height': this.footfixed, 'nav-list': this.foothide, 'fixed-sidebar': this.sidefixed, 'sidenav-wrapper': this.sidecollapse,'scroll-sidebar':  this.sidescroll}"> -->
+<!-- <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" mat-list-icon class="menu-icon">supervisor_account</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Customers</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">payment</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Payments</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings12</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings12</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings12</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings122</span>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="main-content">
+        <div *ngIf="this.footfixed" class="container-footer-fixed">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam nihil commodi eos, voluptatibus sunt
+                dolores numquam deserunt iure aliquam ad molestiae nulla nesciunt iusto saepe ab et in? Expedita unde
+                corporis laborum praesentium quisquam consequuntur exercitationem velit doloremque quam explicabo
+                dolorem quia est nisi sit, rem voluptate repudiandae esse rerum? Iusto nesciunt eveniet eius odio.
+                Facere neque quis officia odit in totam error iure aliquam quod, atque magnam fugit beatae provident
+                quos deleniti distinctio assumenda obcaecati porro amet voluptatem et. Aliquid commodi voluptates est
+                fugit facere consequuntur magni eveniet maxime sit delectus voluptas fuga laboriosam enim recusandae
+                distinctio quo, quam voluptatum vitae saepe harum impedit rem dolore quas! Soluta voluptatem non ad vel
+                veniam eius fugit sint vitae nihil, similique ex ullam quaerat praesentium. Architecto eos dolorum ab
+                culpa neque dignissimos quos eaque nobis quibusdam harum deserunt, excepturi maxime, vitae placeat minus
+                earum dicta esse perferendis temporibus accusamus facere laboriosam eum? Laudantium deserunt, facilis
+                facere, doloribus ipsam dolorem placeat quas, est earum sapiente voluptatum. Voluptatum excepturi ipsa
+                accusamus fugiat incidunt consequatur dignissimos aliquam, corporis adipisci debitis temporibus
+                reprehenderit voluptas aliquid suscipit eveniet dolorem numquam recusandae quidem ut! Cupiditate
+                repellendus nemo illo itaque nulla omnis expedita laborum odio voluptatum ad? Veritatis!</p>
+
+        </div>
+        <div *ngIf="!this.footfixed" class="container-footer-hide">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptas laudantium perspiciatis
+                necessitatibus at omnis ipsam eius fugit impedit facilis. Autem ut repellat enim illum! Laboriosam,
+                expedita facere hic optio ullam ducimus itaque cum numquam, recusandae odio libero incidunt amet
+                praesentium corrupti? Totam illum nobis nemo fuga ducimus magnam facere, corrupti dignissimos quasi
+                perspiciatis eum molestiae. Excepturi, dolor dolorem praesentium nostrum fugiat labore nemo quidem
+                repudiandae. Amet, ipsum nisi! Asperiores laudantium eius aperiam eos obcaecati odit dolor consequuntur,
+                ratione id nemo, voluptas distinctio nesciunt quo expedita fugit voluptatem reiciendis quas amet veniam
+                repudiandae dicta nisi! Voluptatem eligendi, facere enim doloremque suscipit, beatae expedita provident
+                maxime ipsum quisquam recusandae placeat dicta? Reiciendis nostrum sapiente blanditiis. Dignissimos
+                dolore sunt illo porro ut! Molestias cumque voluptas, suscipit reprehenderit iure laborum facere quis
+                rem tempora maiores. Facere laborum fuga recusandae enim quisquam, quaerat rerum, necessitatibus debitis
+                quasi corrupti, saepe culpa est iusto veniam! Recusandae ut, deserunt fugit, soluta quidem voluptas nemo
+                rerum quos sed, voluptate quasi adipisci magni sint et quisquam saepe? Deserunt dolorum enim quisquam
+                necessitatibus aliquam adipisci consequatur temporibus ullam iure dolor inventore esse sunt cupiditate
+                veritatis ipsum, animi recusandae porro autem possimus libero nisi reprehenderit molestias. Deserunt
+                dolorem laborum dolorum ut!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam sit, nostrum expedita possimus culpa
+                corrupti
+                ipsam dolores aut hic et laboriosam dolorum aliquam, rem autem aspernatur asperiores itaque maiores
+                tempore
+                provident omnis molestiae totam vero reprehenderit perferendis. Quod, fuga illo est accusamus maxime,
+                facere
+                earum, ex commodi excepturi tempore esse. Ipsum ducimus culpa iusto ipsa dolores et molestias maiores
+                impedit,
+                facere dolorum vel enim illo quod velit totam dolor fugit ab cupiditate id soluta unde suscipit ipsam.
+                Rem
+                debitis voluptas expedita obcaecati enim sed quis, ipsa repellat sint temporibus culpa nostrum
+                consectetur
+                consequuntur deserunt quos hic alias! Quo ad ducimus dolore similique veritatis nesciunt error dolores
+                laudantium molestiae possimus culpa accusamus modi, vel cupiditate aliquid sapiente aliquam voluptate
+                enim
+                reprehenderit velit nihil adipisci? Earum autem alias libero placeat odit tenetur, ratione molestiae
+                beatae ab,
+                minus maxime adipisci accusantium. Ex cupiditate, laudantium rem maiores recusandae porro necessitatibus
+                consequuntur veniam enim blanditiis. Dignissimos delectus officia illum magnam provident perspiciatis
+                fugit nam
+                odit reprehenderit suscipit deleniti quisquam quod porro reiciendis, iure beatae nesciunt quo ea magni
+                praesentium molestiae repellat excepturi molestias optio. Perspiciatis totam aut magnam error, laborum,
+                ea quos
+                atque, blanditiis soluta dolores velit quo illum deleniti? Unde illo odit perferendis labore nemo
+                obcaecati
+                dicta, eius quia harum quae accusamus possimus, laboriosam doloribus dolor delectus magnam ratione
+                tempora
+                distinctio cumque voluptates amet neque! Facilis aut nihil beatae excepturi sunt perspiciatis qui earum
+                dolorum
+                reprehenderit dolores amet cupiditate rerum iste, laudantium, recusandae ex praesentium dolore deleniti!
+                Harum
+                distinctio inventore obcaecati libero est sint temporibus veritatis perferendis, minima provident
+                accusamus
+                consequuntur quaerat dolorum natus vero, ex sit velit porro earum veniam aut vel laboriosam? Id maxime
+                quidem
+                ipsum ea reiciendis voluptatibus harum, necessitatibus aliquam aut quam doloremque voluptatem neque!
+                Error
+                asperiores doloremque repellendus dolor perferendis dolore quas aut, aperiam, delectus molestiae velit.
+                Earum,
+                hic eaque maxime minima et voluptate perspiciatis tenetur, quos ad mollitia inventore eius! Voluptate
+                magnam
+                perferendis omnis nostrum totam fuga, perspiciatis quidem a minima assumenda commodi dolore facilis odio
+                animi
+                ducimus qui cumque distinctio dicta id sunt eveniet repellendus praesentium illum. Aspernatur distinctio
+                ipsa
+                vitae placeat omnis qui quidem sed amet dolorem esse libero ex laborum, eum beatae repellendus tempore
+                delectus
+                dolorum rem quod magni laudantium corrupti iure? Inventore soluta iusto quas mollitia facere aut ea qui
+                unde.
+                Natus, molestias soluta officiis ducimus aspernatur necessitatibus maxime qui unde, itaque velit
+                delectus non.
+                Accusantium perspiciatis, temporibus molestias ipsa nesciunt placeat quia odit.</p>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container> -->
+<mat-sidenav-container class="sidenav-container mat-app-background" [ngStyle]="{'bottom.px':this.footfixed === true ? 170 : 0}"
+    style="overflow-y: auto;" [ngClass]="{'darkMode': this.toggle}">
+    <mat-sidenav #nav mode="side" [opened]="true" [style.background-color]="trstat.rgba" class="sidenav">
+        <mat-nav-list
+            [ngClass]="{ 'fixed-footer-height': this.footfixed && this.sidefixed, 'nav-list': this.foothide && this.sidefixed, 'sidenav-wrapper': this.sidecollapse && (this.footfixed || this.foothide),'scroll-sidebar':  this.sidescroll && (this.footfixed || this.foothide)}">
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" mat-list-icon class="menu-icon">supervisor_account</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Customers</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">payment</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Payments</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <!-- <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings12</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings12</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings12</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings</span>
+            </a>
+            <a mat-list-item href="#" class="menu-width">
+                <mat-icon [style.color]="prstat.rgba" class="menu-icon">settings</mat-icon>
+                <span mat-line [style.color]="prstat.rgba">Settings122</span>
+            </a> -->
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="main-content">
+        <div *ngIf="this.footfixed" class="container-footer-fixed">
+            <h1>Lorem Ipsum</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam nihil commodi eos, voluptatibus sunt
+                dolores numquam deserunt iure aliquam ad molestiae nulla nesciunt iusto saepe ab et in? Expedita unde
+                corporis laborum praesentium quisquam consequuntur exercitationem velit doloremque quam explicabo
+                dolorem quia est nisi sit, rem voluptate repudiandae esse rerum? Iusto nesciunt eveniet eius odio.
+                Facere neque quis officia odit in totam error iure aliquam quod, atque magnam fugit beatae provident
+                quos deleniti distinctio assumenda obcaecati porro amet voluptatem et. Aliquid commodi voluptates est
+                fugit facere consequuntur magni eveniet maxime sit delectus voluptas fuga laboriosam enim recusandae
+                distinctio quo, quam voluptatum vitae saepe harum impedit rem dolore quas! Soluta voluptatem non ad vel
+                veniam eius fugit sint vitae nihil, similique ex ullam quaerat praesentium. Architecto eos dolorum ab
+                culpa neque dignissimos quos eaque nobis quibusdam harum deserunt, excepturi maxime, vitae placeat minus
+                earum dicta esse perferendis temporibus accusamus facere laboriosam eum? Laudantium deserunt, facilis
+                facere, doloribus ipsam dolorem placeat quas, est earum sapiente voluptatum. Voluptatum excepturi ipsa
+                accusamus fugiat incidunt consequatur dignissimos aliquam, corporis adipisci debitis temporibus
+                reprehenderit voluptas aliquid suscipit eveniet dolorem numquam recusandae quidem ut! Cupiditate
+                repellendus nemo illo itaque nulla omnis expedita laborum odio voluptatum ad? Veritatis!</p>
+
+        </div>
+        <div *ngIf="!this.footfixed" class="container-footer-hide">
+            <h1>Lorem Ipsum</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi voluptas laudantium perspiciatis
+                necessitatibus at omnis ipsam eius fugit impedit facilis. Autem ut repellat enim illum! Laboriosam,
+                expedita facere hic optio ullam ducimus itaque cum numquam, recusandae odio libero incidunt amet
+                praesentium corrupti? Totam illum nobis nemo fuga ducimus magnam facere, corrupti dignissimos quasi
+                perspiciatis eum molestiae. Excepturi, dolor dolorem praesentium nostrum fugiat labore nemo quidem
+                repudiandae. Amet, ipsum nisi! Asperiores laudantium eius aperiam eos obcaecati odit dolor consequuntur,
+                ratione id nemo, voluptas distinctio nesciunt quo expedita fugit voluptatem reiciendis quas amet veniam
+                repudiandae dicta nisi! Voluptatem eligendi, facere enim doloremque suscipit, beatae expedita provident
+                maxime ipsum quisquam recusandae placeat dicta? Reiciendis nostrum sapiente blanditiis. Dignissimos
+                dolore sunt illo porro ut! Molestias cumque voluptas, suscipit reprehenderit iure laborum facere quis
+                rem tempora maiores. Facere laborum fuga recusandae enim quisquam, quaerat rerum, necessitatibus debitis
+                quasi corrupti, saepe culpa est iusto veniam! Recusandae ut, deserunt fugit, soluta quidem voluptas nemo
+                rerum quos sed, voluptate quasi adipisci magni sint et quisquam saepe? Deserunt dolorum enim quisquam
+                necessitatibus aliquam adipisci consequatur temporibus ullam iure dolor inventore esse sunt cupiditate
+                veritatis ipsum, animi recusandae porro autem possimus libero nisi reprehenderit molestias. Deserunt
+                dolorem laborum dolorum ut!</p>
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam sit, nostrum expedita possimus culpa
+                corrupti
+                ipsam dolores aut hic et laboriosam dolorum aliquam, rem autem aspernatur asperiores itaque maiores
+                tempore
+                provident omnis molestiae totam vero reprehenderit perferendis. Quod, fuga illo est accusamus maxime,
+                facere
+                earum, ex commodi excepturi tempore esse. Ipsum ducimus culpa iusto ipsa dolores et molestias maiores
+                impedit,
+                facere dolorum vel enim illo quod velit totam dolor fugit ab cupiditate id soluta unde suscipit ipsam.
+                Rem
+                debitis voluptas expedita obcaecati enim sed quis, ipsa repellat sint temporibus culpa nostrum
+                consectetur
+                consequuntur deserunt quos hic alias! Quo ad ducimus dolore similique veritatis nesciunt error dolores
+                laudantium molestiae possimus culpa accusamus modi, vel cupiditate aliquid sapiente aliquam voluptate
+                enim
+                reprehenderit velit nihil adipisci? Earum autem alias libero placeat odit tenetur, ratione molestiae
+                beatae ab,
+                minus maxime adipisci accusantium. Ex cupiditate, laudantium rem maiores recusandae porro necessitatibus
+                consequuntur veniam enim blanditiis. Dignissimos delectus officia illum magnam provident perspiciatis
+                fugit nam
+                odit reprehenderit suscipit deleniti quisquam quod porro reiciendis, iure beatae nesciunt quo ea magni
+                praesentium molestiae repellat excepturi molestias optio. Perspiciatis totam aut magnam error, laborum,
+                ea quos
+                atque, blanditiis soluta dolores velit quo illum deleniti? Unde illo odit perferendis labore nemo
+                obcaecati
+                dicta, eius quia harum quae accusamus possimus, laboriosam doloribus dolor delectus magnam ratione
+                tempora
+                distinctio cumque voluptates amet neque! Facilis aut nihil beatae excepturi sunt perspiciatis qui earum
+                dolorum
+                reprehenderit dolores amet cupiditate rerum iste, laudantium, recusandae ex praesentium dolore deleniti!
+                Harum
+                distinctio inventore obcaecati libero est sint temporibus veritatis perferendis, minima provident
+                accusamus
+                consequuntur quaerat dolorum natus vero, ex sit velit porro earum veniam aut vel laboriosam? Id maxime
+                quidem
+                ipsum ea reiciendis voluptatibus harum, necessitatibus aliquam aut quam doloremque voluptatem neque!
+                Error
+                asperiores doloremque repellendus dolor perferendis dolore quas aut, aperiam, delectus molestiae velit.
+                Earum,
+                hic eaque maxime minima et voluptate perspiciatis tenetur, quos ad mollitia inventore eius! Voluptate
+                magnam
+                perferendis omnis nostrum totam fuga, perspiciatis quidem a minima assumenda commodi dolore facilis odio
+                animi
+                ducimus qui cumque distinctio dicta id sunt eveniet repellendus praesentium illum. Aspernatur distinctio
+                ipsa
+                vitae placeat omnis qui quidem sed amet dolorem esse libero ex laborum, eum beatae repellendus tempore
+                delectus
+                dolorum rem quod magni laudantium corrupti iure? Inventore soluta iusto quas mollitia facere aut ea qui
+                unde.
+                Natus, molestias soluta officiis ducimus aspernatur necessitatibus maxime qui unde, itaque velit
+                delectus non.
+                Accusantium perspiciatis, temporibus molestias ipsa nesciunt placeat quia odit.</p> -->
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+<app-footer *ngIf="this.footfixed"></app-footer>

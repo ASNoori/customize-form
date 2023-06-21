@@ -1,5 +1,13 @@
 # CustomizeForm
 
+Customizing,
+-the header whether it is fixed or sticky,
+-the sidebar whether it is collapsed or fixed,
+-the footer whether it is fixed or hide,
+-Applying dark mode or light mode to the page
+-Applying customized colors to the page
+By choosing options in the customization setting form.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
 
 ## Development server
